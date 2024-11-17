@@ -15,7 +15,7 @@ export default (string, format) => {
 
   // Convert dateObj to Luxon DateTime object, using UTC
   // See: https://11ty.dev/docs/dates/#dates-off-by-one-day
-  let date = DateTime.fromJSDate(dateObject, {
+  let date = typeof(dateObject) == 'string' ? DateTime.fromISO(dateObject) : DateTime.fromJSDate(dateObject, {
     locale: 'en-GB',
     zone: 'utc'
   })

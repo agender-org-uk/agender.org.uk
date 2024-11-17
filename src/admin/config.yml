@@ -12,7 +12,7 @@ media_folder: src/assets
 public_folder: /assets
 
 collections:
-- name: page
+- name: pages
   label: Pages
   label_singular: Page
   folder: src/pages
@@ -31,7 +31,7 @@ collections:
   - label: Content
     name: body
     widget: markdown
-- name: resource
+- name: resources
   label: Resources
   label_singular: Resource
   folder: src/resources

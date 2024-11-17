@@ -9,3 +9,5 @@ layout: base.liquid
   </header>
 </div>
 {{ content }}
+
+<p>Last updated by <a href="{{ author.html_url}}">@{{ author.login }}</a> at {{ commit.commit.committer.date | date: "dd LLLL yyyy TT" }}. <a href="/admin/#/edit/{{ decap.collection }}/{{ decap.entry }}">Edit this page</a>.</p>
