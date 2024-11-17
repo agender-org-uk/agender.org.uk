@@ -70,3 +70,28 @@ collections:
   - label: Content
     name: body
     widget: markdown
+- name: data
+  label: Data
+  files:
+  - label: "Members"
+    name: "members"
+    file: "data/members.json"
+    editor:
+    preview: false
+    fields:
+    - label: Members
+      name: members
+      widget: list
+      fields:
+      - label: Name
+        name: name
+      - label: Pronouns
+        name: pronouns
+      - label: Summary
+        name: summary
+        widget: markdown
+      - label: GitHub Username
+        name: github_username
+      - label: GitHub Teams
+        name: github_teams
+        widget: list
