@@ -1,0 +1,14 @@
+{
+  "members": [
+    {
+      "name": "Joe Roberts",
+      "pronouns": "They/Them",
+      "github_username": "two-first-names",
+      "github_teams": [
+        "agender-exco",
+        "agender-admins"
+      ],
+      "github_role": "admin"
+    }
+  ]
+}
