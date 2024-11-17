@@ -77,7 +77,7 @@ collections:
     name: "members"
     file: "data/members.json"
     editor:
-    preview: false
+      preview: false
     fields:
     - label: Members
       name: members
