@@ -11,7 +11,7 @@ const octokit = new Octokit({
 })
 
 await octokit.request('POST /repos/{owner}/{repo}/statuses/{sha}', {
-  owner: 'two-first-names',
+  owner: 'agender-org-uk',
   repo: 'agender.org.uk',
   sha: CF_PAGES_COMMIT_SHA,
   state: 'success',
