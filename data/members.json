@@ -8,7 +8,8 @@
         "agender-exco",
         "agender-admins"
       ],
-      "github_role": "admin"
+      "github_role": "admin",
+      "summary": "This is a test."
     }
   ]
 }
