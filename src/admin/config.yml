@@ -3,7 +3,7 @@ site_url: https://agender.org.uk
 
 backend:
   name: github
-  repo: two-first-names/agender.org.uk
+  repo: agender-org-uk/agender.org.uk
   branch: main
   base_url: https://decap-proxy.engiqueer.net
   preview_context: deployment/cloudflare-pages
