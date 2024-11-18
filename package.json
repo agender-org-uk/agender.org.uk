@@ -5,16 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "watch:sass": "sass --watch _sass/all.scss src/assets/all.css",
-    "build:sass": "sass _sass/all.scss src/assets/all.css",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "eleventy",
-    "start": "npm-run-all build:sass --parallel watch:*",
+    "start": "npm-run-all --parallel watch:*",
     "build": "npm-run-all build:*",
     "pages:eleventy": "env NODE_ENV=production eleventy",
-    "pages:sass": "sass _sass/all.scss src/assets/all.css",
     "pages:post-deploy": "node cf-pages-preview-notify-github.js",
-    "pages": "npm-run-all pages:sass pages:eleventy pages:post-deploy"
+    "pages": "npm-run-all pages:eleventy pages:post-deploy"
   },
   "author": "",
   "license": "MIT",

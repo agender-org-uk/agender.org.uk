@@ -1,13 +1,7 @@
 ---
 layout: base.liquid
 ---
-<div class="grid-row">
-  <header class="page--header page--header--loop">
-    <div class="grid-column-full">
-      <h1 class="page--heading">{{ title }}</h1>
-    </div>
-  </header>
-</div>
+<h1 class="page--heading">{{ title }}</h1>
 {{ content }}
 
 <p>Last updated by <a href="{{ author.html_url}}">@{{ author.login }}</a> at {{ commit.commit.committer.date | date: "dd LLLL yyyy TT" }}. <a href="/admin/#/edit/{{ decap.collection }}/{{ decap.entry }}">Edit this page</a>.</p>
