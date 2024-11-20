@@ -16,7 +16,7 @@ Once your account is created, share your username with Joe to get write access t
 
 ## Editing pages
 
-Once you have a GitHub account and you have been granted write permission, you can access the site admin interface at <https://agender.org.uk/admin>. From there you can add and edit pages on the site. When you edit pages, they will be created as drafts, which can be reviewed and published. A preview page link will allow you to see the changes before they are published.
+Once you have a GitHub account and you have been granted write permission, you can access the site admin interface at <https://agender.org.uk/admin>. You will be prompted to authorize the 'Engiqueer GitHub OAuth Proxy' to access your account, this is fine and expected. (It's a small tool written by Joe that allows Decap to interact with GitHub.) From there you can add and edit pages on the site. When you edit pages, they will be created as drafts, which can be reviewed and published. A preview page link will allow you to see the changes before they are published.
 
 ## The review process
 
