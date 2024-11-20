@@ -18,8 +18,6 @@ collections:
   folder: src/pages
   create: true
   preview_path: '{{ slug }}'
-  nested:
-    depth: 100
   fields:
   - label: Layout
     name: layout

@@ -15,9 +15,9 @@ Full Membership is open to staff in government departments, agencies and other a
 Allies are friends, relatives and colleagues who support our aims and objectives. Our allies stand up for trans and intersex people within the workplace, support our full members and spread the word about a:gender. Together we can remove barriers and become agents for positive change.
 
 Note that some of the events we organise may be for full members only. [Read more about the ways we support our members](/for-our-members).
-Allies can still show support, [read more about how you can make a difference in the community](/join-us/how-to-make-a-difference).
+Allies can still show support, [read more about how you can make a difference in the community](/how-to-make-a-difference).
 
-By signing up you consent to our [Privacy Notice](/privacy-notice), to abide by our [member guidelines](/join-us/member-guidelines), and to being added to our membership emailing list.
+By signing up you consent to our [Privacy Notice](/privacy-notice), to abide by our [member guidelines](/member-guidelines), and to being added to our membership emailing list.
 
 Please provide your Civil Service work email address, we cannot accept personal email addresses for membership.
 
