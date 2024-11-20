@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: How to edit this site
 ---
 Note: this page is currently only relevant to ExCo members, in the future we may open up who can edit.

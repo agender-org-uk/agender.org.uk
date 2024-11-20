@@ -24,7 +24,7 @@ collections:
   - label: Layout
     name: layout
     widget: hidden
-    default: post
+    default: page
   - label: Title
     name: title
     widget: string
@@ -41,7 +41,7 @@ collections:
   - label: Layout
     name: layout
     widget: hidden
-    default: post
+    default: page
   - label: Title
     name: title
     widget: string
@@ -63,7 +63,7 @@ collections:
   - label: Layout
     name: layout
     widget: hidden
-    default: post
+    default: page
   - label: Title
     name: title
     widget: string
