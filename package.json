@@ -9,9 +9,10 @@
     "build:eleventy": "eleventy",
     "start": "npm-run-all --parallel watch:*",
     "build": "npm-run-all build:*",
+    "pages:fetch": "git fetch --unshallow",
     "pages:eleventy": "env NODE_ENV=production eleventy",
     "pages:post-deploy": "node cf-pages-preview-notify-github.js",
-    "pages": "npm-run-all pages:eleventy pages:post-deploy"
+    "pages": "npm-run-all pages:fetch pages:eleventy pages:post-deploy"
   },
   "author": "",
   "license": "MIT",
