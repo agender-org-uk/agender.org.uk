@@ -31,8 +31,6 @@ const resource = resources[0];
 ---
 
 <BaseLayout title={resource.title}>
-    <main>
-        <h1>{resource.title}</h1>
-        <article set:html={resource.content} />
-    </main>
+    <h1>{resource.title}</h1>
+    <article set:html={resource.content} />
 </BaseLayout>
