@@ -20,14 +20,12 @@ type Schema = {
   resources: Resource[];
 };
 
-export async function FileLink(resource: Resource): Promise<string | null> {
+export function FileLink(resource: Resource): string | null {
   const fileId = resource.file;
 
   if (!fileId) return null;
 
-  const file = await directus.request(readFile(fileId));
-
-  return `https://directus.agender.org.uk/assets/${file.id}?download`;
+  return `https://directus.agender.org.uk/assets/${fileId}?download`;
 }
 
 const directus = createDirectus<Schema>(

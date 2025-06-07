@@ -18,8 +18,8 @@ const resources = await directus.request(
         DOCX format, and are working on providing them more seamlessly.
     </p>
     {
-        resources.map(async (resource) => {
-            const fileLink = await FileLink(resource);
+        resources.map((resource) => {
+            const fileLink = FileLink(resource);
             const href =
                 resource.direct_link ||
                 fileLink ||
