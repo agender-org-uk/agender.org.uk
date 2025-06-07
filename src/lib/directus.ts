@@ -19,8 +19,8 @@ type Schema = {
   resources: Resource[];
 };
 
-const directus = createDirectus<Schema>("https://directus.agender.org.uk").with(
-  rest(),
-);
+const directus = createDirectus<Schema>(
+  "https://directus.agender.org.uk/",
+).with(rest());
 
 export default directus;
