@@ -25,11 +25,11 @@ export function FileLink(resource: Resource): string | null {
 
   if (!fileId) return null;
 
-  return `https://directus.agender.org.uk/assets/${fileId}?download`;
+  return `https://edit.agender.org.uk/assets/${fileId}?download`;
 }
 
-const directus = createDirectus<Schema>(
-  "https://directus.agender.org.uk/",
-).with(rest());
+const directus = createDirectus<Schema>("https://edit.agender.org.uk/").with(
+  rest(),
+);
 
 export default directus;
