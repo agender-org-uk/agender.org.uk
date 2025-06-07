@@ -14,7 +14,12 @@
   },
   "env": {
     "preview": {
-      "route": "preview.agender.org.uk",
+      "routes": [
+        {
+          "pattern": "preview.agender.org.uk",
+          "custom_domain": true,
+        },
+      ],
     },
   },
   "routes": [
