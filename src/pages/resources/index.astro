@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import directus from "../../lib/directus";
+import { readItems } from "@directus/sdk";
+
+const resources = await directus.request(
+    readItems("resources", {
+        fields: ["*"],
+    }),
+);
+---
+
+<BaseLayout title="Resources">
+    <h1>Resources</h1>
+    <p>
+        Our collection of resources for is everyone who wants to find out more
+        about trans and intersex. We are aware that some of these are in PDF or
+        DOCX format, and are working on providing them more seamlessly.
+    </p>
+    {
+        resources.map((resource) => {
+            const href = resource.direct_link || `/resources/${resource.slug}`;
+            return (
+                <article>
+                    <h2>
+                        <a href={href}>{resource.title}</a>
+                    </h2>
+                    <p>{resource.excerpt}</p>
+                </article>
+            );
+        })
+    }
+</BaseLayout>
