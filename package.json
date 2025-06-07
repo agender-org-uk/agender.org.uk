@@ -7,15 +7,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "deploy": "wrangler deploy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@astrojs/vercel": "^8.1.5",
+    "@astrojs/cloudflare": "^12.5.4",
     "@directus/sdk": "^19.1.0",
     "astro": "^5.9.1"
+  },
+  "devDependencies": {
+    "wrangler": "^4.19.1"
   }
 }
