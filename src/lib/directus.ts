@@ -1,4 +1,4 @@
-import { createDirectus, rest } from "@directus/sdk";
+import { createDirectus, readFile, rest } from "@directus/sdk";
 
 type Page = {
   title: string;
@@ -11,6 +11,7 @@ type Resource = {
   content: string;
   excerpt: string;
   slug: string;
+  file: string | null;
   direct_link: string | null;
 };
 
@@ -18,6 +19,16 @@ type Schema = {
   pages: Page[];
   resources: Resource[];
 };
+
+export async function FileLink(resource: Resource): Promise<string | null> {
+  const fileId = resource.file;
+
+  if (!fileId) return null;
+
+  const file = await directus.request(readFile(fileId));
+
+  return `https://directus.agender.org.uk/assets/${file.id}?download`;
+}
 
 const directus = createDirectus<Schema>(
   "https://directus.agender.org.uk/",

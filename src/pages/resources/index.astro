@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import directus from "../../lib/directus";
+import directus, { FileLink } from "../../lib/directus";
 import { readItems } from "@directus/sdk";
 
 const resources = await directus.request(
@@ -18,8 +18,12 @@ const resources = await directus.request(
         DOCX format, and are working on providing them more seamlessly.
     </p>
     {
-        resources.map((resource) => {
-            const href = resource.direct_link || `/resources/${resource.slug}`;
+        resources.map(async (resource) => {
+            const fileLink = await FileLink(resource);
+            const href =
+                resource.direct_link ||
+                fileLink ||
+                `/resources/${resource.slug}`;
             return (
                 <article>
                     <h2>
