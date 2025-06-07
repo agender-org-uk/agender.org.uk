@@ -1,10 +1,8 @@
-name: Deploy agender.org.uk
+name: Deploy preview.agender.org.uk
 on:
   push:
     branches:
       - main
-  repository_dispatch:
-    types: [deploy]
   workflow_dispatch:
 
 jobs:
@@ -21,8 +19,11 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+        env:
+          PREVIEW: "true"
       - name: Build & Deploy Worker
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          environment: preview

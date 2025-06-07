@@ -12,6 +12,11 @@
   "observability": {
     "enabled": true,
   },
+  "env": {
+    "preview": {
+      "route": "preview.agender.org.uk",
+    },
+  },
   "routes": [
     {
       "pattern": "www.agender.org.uk",
