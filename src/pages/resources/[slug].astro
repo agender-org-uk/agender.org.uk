@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import directus from "../../lib/directus";
-import { readItems } from "@directus/sdk";
+import { readItems, readItem } from "@directus/sdk";
 
 export async function getStaticPaths() {
     const resources = await directus.request(
@@ -11,10 +11,23 @@ export async function getStaticPaths() {
     );
     return resources.map((resource) => ({
         params: { slug: resource.slug },
-        props: resource,
     }));
 }
-const resource = Astro.props;
+
+const { slug } = Astro.params;
+
+const resources = await directus.request(
+    readItems("resources", {
+        filter: {
+            slug: {
+                _eq: slug,
+            },
+        },
+        limit: 1,
+    }),
+);
+
+const resource = resources[0];
 ---
 
 <BaseLayout title={resource.title}>

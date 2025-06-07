@@ -9,9 +9,23 @@ export async function getStaticPaths() {
             fields: ["*"],
         }),
     );
-    return pages.map((post) => ({ params: { slug: post.slug }, props: post }));
+    return pages.map((post) => ({ params: { slug: post.slug } }));
 }
-const page = Astro.props;
+
+const { slug } = Astro.params;
+
+const pages = await directus.request(
+    readItems("pages", {
+        filter: {
+            slug: {
+                _eq: slug,
+            },
+        },
+        limit: 1,
+    }),
+);
+
+const page = pages[0];
 ---
 
 <BaseLayout title={page.title}>
