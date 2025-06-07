@@ -12,4 +12,14 @@
   "observability": {
     "enabled": true,
   },
+  "routes": [
+    {
+      "pattern": "www.agender.org.uk",
+      "custom_domain": true,
+    },
+    {
+      "pattern": "agender.org.uk",
+      "custom_domain": true,
+    },
+  ],
 }
